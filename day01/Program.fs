@@ -16,7 +16,7 @@ zoneight234
 7pqrstsixteen"
 
 let input = 
-    use reader = new StreamReader(new FileStream(@"..\..\..\input-day01.txt", FileMode.Open))
+    use reader = new StreamReader(new FileStream(@"input-day01.txt", FileMode.Open))
     reader.ReadToEnd()
 
 let toLines (str:string) = (str.Split("\n")) |> Seq.where (fun s -> not (String.IsNullOrWhiteSpace(s)))
@@ -82,5 +82,5 @@ let part2Result = toLines input |> part2
 printfn "Part 2 Result: %d" part2Result
 
 printfn ""
-printfn "Press any key to exit"
-System.Console.ReadKey() |> ignore
+printfn "Press ENTER to exit"
+Console.Read() |> ignore
